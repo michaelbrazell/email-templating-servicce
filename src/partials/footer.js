@@ -1,5 +1,10 @@
 exports.footer = `
-</container>
+
+`
+
+const footer = () => {
+  return `
+  </container>
   <container class="email_footer">
     <table class="table_presentation" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
       <tbody>
@@ -18,4 +23,7 @@ exports.footer = `
     </table>
     
   </container>
-`
+  `
+};
+
+exports.footer = footer;

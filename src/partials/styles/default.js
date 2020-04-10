@@ -1,5 +1,6 @@
-exports.styles = `
-<style>
+const styles = () => {
+  return `
+  <style>
     /* Email Background */
     body { 
       background: #e6e6e6;
@@ -256,4 +257,7 @@ exports.styles = `
 
 
   </style>
-`;
+  `
+};
+
+exports.styles = styles;

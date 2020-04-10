@@ -1,5 +1,6 @@
-exports.header = `
-<container class="email_wrapper">
+const header = () => {
+  return `
+  <container class="email_wrapper">
   <row class="email_header">
     <column large="12">
       <table class="table_presentation" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
@@ -24,4 +25,7 @@ exports.header = `
       </table>
     </column>
   </row>
-`
+  `
+};
+
+exports.header = header;
