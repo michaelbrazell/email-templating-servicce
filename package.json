@@ -1,0 +1,14 @@
+{
+  "name": "email-templating-service",
+  "version": "2.0.0",
+  "description": "A frontend service for constructing responsive email",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Murray",
+  "license": "MIT",
+  "dependencies": {
+    "heml": "^1.1.3"
+  }
+}
