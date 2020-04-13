@@ -4,6 +4,22 @@ exports.footer = `
 
 const footer = () => {
   return `
+    </column>
+  </row>
+  <table class="table_presentation outlook_bottom_padding" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                  <tbody>
+                    <tr>
+                      <td height="12"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td class="table_presentation_gutter" width="10">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </column>
+    </row>
   </container>
   <container class="email_footer">
     <table class="table_presentation" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">

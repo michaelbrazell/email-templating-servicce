@@ -1,4 +1,5 @@
 const heml = require('heml');
+const fs = require('fs');
 const styles = require('./partials/styles/default.js')
 const header = require('./partials/header.js')
 const footer = require('./partials/footer.js')
@@ -22,43 +23,17 @@ heml(`
   ${styles.styles()}
 </head>
 <body>
-  
     ${header.header()}
-    <row class="email_content">
-      <column>
-        <table class="table_presentation" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
-          <tbody>
-            <tr>
-              <td class="table_presentation_gutter" width="10">&nbsp;</td>
-              
-              <td class="table_presentation_body">
-
-                ${content.content()}
-                
-                
-                
-
-                <table class="table_presentation outlook_bottom_padding" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
-                  <tbody>
-                    <tr>
-                      <td height="12"></td>
-                    </tr>
-                  </tbody>
-                </table>
-
-              </td>
-              
-              <td class="table_presentation_gutter" width="10">&nbsp;</td>
-            </tr>
-          </tbody>
-        </table>
-      </column>
-    </row>
-    
-  ${footer.footer()}
+    ${content.content()}
+    ${footer.footer()}
 </body>
 </heml>
 `, options)
 .then(({ html, metadata, errors }) => {
-  console.log(html, metadata, errors)
+  var fileName = metadata.subject.toLowerCase().replace(/\s+/g, '-')
+  fs.writeFile('./output/' + fileName + '.html', html, function (err) {
+    if (err) return console.log(err);
+    if (errors) console.log(errors);
+    console.log('Wrote HTML to basic-template.html', metadata)
+  })
 })

@@ -25,6 +25,15 @@ const header = () => {
       </table>
     </column>
   </row>
+  <row class="email_content">
+      <column>
+        <table class="table_presentation" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+          <tbody>
+            <tr>
+              <td class="table_presentation_gutter" width="10">&nbsp;</td>
+              <td class="table_presentation_body">
+                <row>
+                  <column>
   `
 };
 
